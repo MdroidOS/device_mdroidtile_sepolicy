@@ -16,25 +16,25 @@ endif
 endif
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    device/afterlife/sepolicy/common/public
+    device/mdroidtile/sepolicy/common/public
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/afterlife/sepolicy/common/private
+    device/mdroidtile/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/afterlife/sepolicy/common/dynamic \
-    device/afterlife/sepolicy/common/system
+    device/mdroidtile/sepolicy/common/dynamic \
+    device/mdroidtile/sepolicy/common/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/afterlife/sepolicy/common/dynamic \
-    device/afterlife/sepolicy/common/vendor
+    device/mdroidtile/sepolicy/common/dynamic \
+    device/mdroidtile/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/afterlife/sepolicy/legacy-common/sepolicy.mk
+-include device/mdroidtile/sepolicy/legacy-common/sepolicy.mk
 
 # Include atv rules on atv product
 ifeq ($(PRODUCT_IS_ATV), true)
-include device/afterlife/sepolicy/atv/sepolicy.mk
+include device/mdroidtile/sepolicy/atv/sepolicy.mk
 endif
